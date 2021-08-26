@@ -1,6 +1,7 @@
+const DEFAULT_SQUARES = 4
 let canvas = document.querySelector("#grid");
 
-let numberOfCells = 25;
+let numberOfCells = DEFAULT_SQUARES;
 let side = 700 / numberOfCells;
 var slider = document.getElementById("cellNumber");
 var output = document.getElementById("sliderValue");
@@ -12,9 +13,6 @@ slider.oninput = function() {
     numberOfCells = this.value;
     side = 700 / numberOfCells;
 }
-
-
-
 
 createCells(numberOfCells, side, canvas);
 
