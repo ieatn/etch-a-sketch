@@ -9,14 +9,20 @@
 </head>
 <body>
     <h1>Etch-a-Sketch</h1>
-    <div class="btns">
-        <button id="reset">Reset</button>
+    <div id="buttons">
+        <button type="submit" class="buttons" id="blackBrush">Black</button>
+        <button type="submit" class="buttons" id="rainbowBrush">Color</button>
+        <button type="submit" class="buttons" id="eraser">Eraser</button>
+        <div id="slider" class="buttons">
+            <input type="range" min="1" max="8" Value="4" class="slider" id="cellNumber">
+            <p>Size: <span id="sliderValue"></span></p>
+            <button type="submit" id="reset">Reset</button>
+        </div>
     </div>
-    <div class="slider">
-        <input type="range" min="2" max="8" value="4" id="slider">
-        <p class="value">4</p>
+    <div id="container">
+        <div id="grid">
+        </div>
     </div>
-    <div class="grid"></div>
-    <script src="main.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
