@@ -1,93 +1,48 @@
 * {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-h1 {
-    font-size: 50px;
-}
-body{
-    background-color: blanchedalmond;
+body {
     text-align: center;
+    font-size: 24px;
 }
-
-#buttons{
-    display:flex;
-    width:100vw;
-    justify-content: center;
-    align-items: center;
-    height:10vh;
-    margin-top:5vh;
-    margin-bottom: 5vh;
-    background: #3E00FF;
-    border-top: 4px solid #AE00FB;
-    border-bottom: 4px solid #AE00FB;
-}
-
-.buttons{
-    margin: 40px;
-    padding: 10px;
-    font-size: 1.2rem;
-    border-radius: 15px;
-    border: 3px solid;
-    border-color: #AE00FB;
-    transition: 0.09s;
-    cursor:pointer;
-    background: #B5FFD9;
-}
-
-p{
-    height: 20px;
-    min-width:85px;
-}
-
-#slider{
-    display: flex;
-    align-items: center;
-    background: #B5FFD9;
-    
-}
-
-.slider{
-    cursor: pointer;
-    margin-right:5px;
-}
-
-.slider:hover {
-    opacity: 1; /* Fully shown on mouse-over */
-  }
-
-#reset{
-    font-size: 1.2rem;
-    transition: 0.09s;
-    border: none;
-    cursor:pointer;
-    background: #B5FFD9;
-    margin-left: 10px;
-}
-
-button:hover{
-    background-color: #edca82;
-    transform:scale(1.1); 
-}
-
-button:active{
-    transform:scale(1.2);
-}
-
+/* flex wrap makes the cells fill up the container instead of going straight down */
 #container {
-    display:flex;
-    width: 100vw;
-    justify-content: center;
-}
-
-#grid {
-    display: flex;
-    flex-wrap: wrap;
     width: 700px;
     height: 700px;
-    border: 3px solid #AE00FB;
+    background-color: whitesmoke;
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
 }
-
-.box{
-    background-color: white;
+#slider {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 800px;
+    margin-left: 18rem;
+    background-color: aqua;
+    padding: 50px;
+    border-radius: 25px;
+    border: solid red 5px;
+}
+#controls {
+    display: flex;
+    /* grid-area: 1/3/1/4 */
+}
+.btn {
+    width: 100px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 50px;
+    border: none;
+    background-color: pink;
+    transition: 0.25s;
+}
+.btn:hover {
+    transform: scale(1.2);
+    transform: translateY(-20%);
+}
+#range-value {
+    font-size: 18px;
 }
